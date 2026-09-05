@@ -32,13 +32,13 @@ Open a command/terminal window at the same level as this readme and run:
 
 ## Run the tests
 
-The runner is available [here](cucumber-java-selenium/src/test/java/io/cucumber/RunCucumberTest.java)
+The runner is available [here](cucumber-java-selenium/src/test/java/RunCucumberTest.java)
 
 A basic HTML report will be available [here](cucumber-java-selenium/target/cucumber-report/cucumber.html) after a test run.
 
 ### Run a subset of Features or Scenarios
 
-The feature file lives [here](cucumber-java-selenium/src/test/resources/io/cucumber/features/theInternet.feature)
+The feature file lives [here](cucumber-java-selenium/src/test/resources/features/theInternet.feature)
 
 You can also specify what to run by *tag*:
 
@@ -46,7 +46,7 @@ You can also specify what to run by *tag*:
 
 # Required task
 
-There are 3 titled scenarios in the [feature file](cucumber-java-selenium/src/test/resources/io/cucumber/features/theInternet.feature).
+There are 3 titled scenarios in the [feature file](cucumber-java-selenium/src/test/resources/features/theInternet.feature).
 
 Please complete the scenarios to cover the requirements. Feel free to rework/create step definitions, rework/create Page Object Models as you deem appropriate.
 

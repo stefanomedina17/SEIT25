@@ -1,0 +1,9 @@
+glue\Navigation.class
+core\Context.class
+pages\Page.class
+core\Hooks.class
+RunCucumberTest.class
+locators\Home.class
+pages\Home.class
+core\Manager.class
+glue\Home.class
