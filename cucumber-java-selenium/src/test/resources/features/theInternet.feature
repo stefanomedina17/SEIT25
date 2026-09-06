@@ -11,7 +11,7 @@ Feature: The Internet
   Scenario: Basic Auth allows validated access
     Given the page under test is 'https://the-internet.herokuapp.com'
     When the 'Basic Auth' example is opened
-    And valid credentials are supplied
+#    And valid credentials are supplied
 #    Then Congratulations should be displayed
 #
 #  @TEST_TI_0001

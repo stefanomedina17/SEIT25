@@ -4,7 +4,6 @@ import core.Context;
 import core.Manager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en.And;
 import org.junit.jupiter.api.Assertions;
 import pages.page_Home;
 
@@ -21,16 +20,9 @@ public class Home extends Context {
 
   @When("the home page is loaded successfully")
   public void verifyHomePageLoad() {
-    //System.out.println("printing shared stash :" + getTestStash().toString());
     boolean homePageLoaded = homePage.isHomePageLoaded();
     Assertions.assertTrue(homePageLoaded);
   }
-
-  @When("the 'Basic Auth' example is opened")
-  public void verifyBasicAuthRedirection(){
-
-  }
-
 
   @Then("verify if actual displayed list matches expected list")
   public void verifyHomePageList(){
@@ -47,7 +39,4 @@ public class Home extends Context {
 
     Assertions.assertNotEquals(actualList, List.of(expectedList), "Results do not match");
   }
-
-  @And("verify if actual displayed list matches expected list")
-  public void
 }

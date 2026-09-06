@@ -1,10 +1,13 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebElement;
 
 import locators.Home;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +52,21 @@ public class page_Home extends Page {
     return homeList;
   }
 
+  public void clickListOption(String example){
+    int listSize = locatorHome.listHome.size();
+    System.out.println("----Locating Basic Auth----");
+
+    for(int i = 0; i < listSize; i++){
+      WebElement option = locatorHome.listHome.get(i);
+
+      if(option.getText().contains(example)){
+        option.findElement(By.tagName("a")).click();
+        waitForPageLoad();
+        System.out.println("----Option was clicked----");
+        break;
+      }
+    }
+  }
 
   public void refresh() {
     driver.navigate().refresh();
