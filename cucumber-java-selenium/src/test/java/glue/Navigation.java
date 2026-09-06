@@ -3,25 +3,21 @@ package glue;
 import io.cucumber.java.en.Given;
 import core.Context;
 import core.Manager;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import pages.page_Home;
 
 public class Navigation extends Context {
 
+  public page_Home homePage;
+
   public Navigation(Manager manager) {
     super(manager);
+    this.homePage = new page_Home(manager.getDriver());
   }
 
   @Given("^the page under test is '(.+)'$")
   public void navToPage(String url) {
-
-    if (manager.getDriver() == null) {
-      ChromeOptions options = new ChromeOptions();
-      options.addArguments("start-maximized");
-      manager.setDriver(new ChromeDriver(options));
-    }
-
     manager.getDriver().get(url);
-    stash("exampleKey1", "exampleValue1");
+    stash("user", "admin");
+    stash("pass", "admin");
   }
 }

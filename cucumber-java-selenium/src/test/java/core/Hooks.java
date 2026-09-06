@@ -26,25 +26,26 @@ public class Hooks extends Context {
     options.addArguments("start-maximized");
     options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
     manager.setDriver(new ChromeDriver(options));
-    System.out.println("Made driver");
+    System.out.println("Driver is ready");
+    System.out.println("----START TEST----");
   }
 
   @BeforeStep
   public void beforeStep() {
-    System.out.println("Starting step..............................");
+    System.out.println("----START OF STEP----");
   }
 
   @AfterStep
   public void afterStep(Scenario scenario) {
     byte[] screenshot = getDriver().getScreenshotAs(OutputType.BYTES);
-    scenario.attach(screenshot, "image/png", "A Nice Screenshot.");
-    System.out.println("End of step................................");
+    scenario.attach(screenshot, "image/png", "TestArtifact");
+    System.out.println("----END OF STEP----");
   }
 
   @After
   public void after() {
     getDriver().quit();
     System.out.println("Quit driver");
+    System.out.println("----FINISHED TEST----");
   }
-
 }
