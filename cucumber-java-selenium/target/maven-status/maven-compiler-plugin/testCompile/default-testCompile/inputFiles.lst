@@ -1,9 +1,15 @@
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\core\Context.java
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\core\Hooks.java
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\core\Manager.java
+C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\glue\BasicAuth.java
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\glue\Home.java
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\glue\Navigation.java
+C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\glue\SortableDataTables.java
+C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\locators\BasicAuth.java
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\locators\Home.java
-C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\pages\Home.java
+C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\locators\SortableDataTables.java
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\pages\Page.java
+C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\pages\page_basicAuth.java
+C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\pages\page_Home.java
+C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\pages\page_SortableDataTables.java
 C:\Users\stefa\SEIT25\cucumber-java-selenium\src\test\java\RunCucumberTest.java

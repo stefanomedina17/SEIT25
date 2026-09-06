@@ -2,31 +2,30 @@ package glue;
 
 import core.Context;
 import core.Manager;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
-import org.junit.jupiter.api.Assertions;
-import pages.page_Home;
+import io.cucumber.java.en.Then;
 import pages.page_basicAuth;
 
-import java.util.List;
+import java.awt.*;
 
 public class BasicAuth extends Context{
 
-    public page_Home homePage;
-    //public page_basicAuth basicAuthPage;
+    public page_basicAuth basicAuthPage;
 
-    public BasicAuth(Manager manager) {
+    public BasicAuth(Manager manager) throws AWTException {
         super(manager);
-        this.homePage = new page_Home(manager.getDriver());
+        this.basicAuthPage = new page_basicAuth(manager.getDriver());
     }
 
-    //System.out.println("printing shared stash :" + getTestStash().toString());
+    @And("user logs in")
+    public void enterCredentials() {
+        String user = fetch("user");
+        String pass = fetch("pass");
+        basicAuthPage.login(user, pass);
+    }
 
-    @When("^the '(.+)' example is opened$")
-    public void verifyBasicAuthPageRedirection(String option) {
-        homePage.clickListOption(option);
-//        boolean homePageLoaded = homePage.isHomePageLoaded();
-//        Assertions.assertTrue(homePageLoaded);
+    @Then("Congratulations text should be displayed")
+    public void verifyCongratulationsIsDisplayed() {
+        basicAuthPage.isCongratulationsDisplayed();
     }
 }

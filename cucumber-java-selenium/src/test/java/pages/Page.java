@@ -10,8 +10,12 @@ public class Page {
   protected ChromeDriver driver;
 
   public Page(ChromeDriver driver) {
+    if (driver == null) {
+      throw new IllegalStateException("WebDriver is null");
+    }
     this.driver = driver;
     PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(5)), this);
+
     waitForPageLoad();
   }
 

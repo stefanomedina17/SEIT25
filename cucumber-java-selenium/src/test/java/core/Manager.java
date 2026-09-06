@@ -15,10 +15,21 @@ public class Manager {
   }
 
   public ChromeDriver getDriver() {
+    if (driver == null) {
+      driver = new ChromeDriver();
+      driver.manage().window().maximize();
+    }
     return driver;
   }
 
   public void setDriver(ChromeDriver driver) {
     this.driver = driver;
+  }
+
+  public void quitDriver() {
+    if (driver != null) {
+      driver.quit();
+      driver = null;
+    }
   }
 }

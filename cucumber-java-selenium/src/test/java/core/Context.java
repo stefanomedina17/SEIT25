@@ -23,4 +23,8 @@ public class Context {
     System.out.println("Stashing : " + key);
     manager.stash.put(key, value);
   }
+
+  public <T> T fetch(String key){
+    return (T) manager.stash.get(key);
+  }
 }

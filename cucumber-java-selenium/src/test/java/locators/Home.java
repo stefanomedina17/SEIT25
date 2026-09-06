@@ -8,9 +8,9 @@ import java.util.List;
 public class Home{
 
     @FindBy(css = "h1")
-    public WebElement titleHome;
+    public WebElement headerHome;
 
     //a[contains(text(), '{string}')]
     @FindBy(css = "li")
-    public List<WebElement> listHome;
+    public List<WebElement> listOptions;
 }

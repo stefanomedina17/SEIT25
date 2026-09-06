@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.78 s -- in RunCucumberTest
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 62.33 s <<< FAILURE! -- in RunCucumberTest
+RunCucumberTest.The Internet - Homepage has a list of links to Expected examples -- Time elapsed: 16.17 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Results do not match ==> expected: <[A/B Testing, Add/Remove Elements, Basic Auth (user and pass: admin), Broken Images, Challenging DOM, Checkboxes, Context Menu, Digest Authentication (user and pass: admin), Disappearing Elements, Drag and Drop, Dropdown, Dynamic Content, Dynamic Controls, Dynamic Loading, Entry Ad, Exit Intent, File Download, File Upload, Floating Menu, Forgot Password, Form Authentication, Frames, Geolocation, Horizontal Slider, Hovers, Infinite Scroll, Inputs, JQuery UI Menus, JavaScript Alerts, JavaScript onload event error, Key Presses, Large & Deep DOM, Multiple Windows, Nested Frames, Notification Messages, Redirect Link, Secure File Download, Shadow DOM, Shifting Content, Slow Resources, Sortable Data Tables, Status Codes, Typos, WYSIWYG Editor]> but was: <[A/B Testing, Add/Remove Elements, Basic Auth (user and pass: admin), Broken Images, Challenging DOM, Context Menu, Digest Authentication (user and pass: admin), Disappearing Elements, Drag and Drop, Dropdown, Dynamic Content, Dynamic Controls, Dynamic Loading, Entry Ad, Exit Intent, File Download, File Upload, Floating Menu, Forgot Password, Form Authentication, Geolocation, Horizontal Slider, Infinite Scroll, Inputs, JavaScript Alerts, JavaScript onload event error, Key Presses, Large & Deep DOM, Multiple Windows, Nested Frames, Notification Messages, Redirect Link, Secure File Download, Shadow DOM, Shifting Content, Slow Resources, Sortable Data Tables, Typos, Redirect Link, WYSIWYG Editor]>
+	at pages.page_Home.areListValuesMatched(page_Home.java:119)
+	at glue.Home.verifyHomePageList(Home.java:30)
+	at ✽.the actual displayed list matches expected list(classpath:features/theInternet.feature:8)
+

@@ -38,7 +38,7 @@ public class Hooks extends Context {
   @AfterStep
   public void afterStep(Scenario scenario) {
     byte[] screenshot = getDriver().getScreenshotAs(OutputType.BYTES);
-    scenario.attach(screenshot, "image/png", "TestArtifact");
+    scenario.attach(screenshot, "image/png", scenario.getName());
     System.out.println("----END OF STEP----");
   }
 

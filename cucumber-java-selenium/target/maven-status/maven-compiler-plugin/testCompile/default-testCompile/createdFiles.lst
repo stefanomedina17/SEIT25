@@ -1,9 +1,15 @@
 glue\Navigation.class
-core\Context.class
 pages\Page.class
 core\Hooks.class
+locators\BasicAuth.class
 RunCucumberTest.class
+glue\SortableDataTables.class
+pages\page_basicAuth.class
+core\Context.class
+pages\page_SortableDataTables.class
+locators\SortableDataTables.class
+pages\page_Home.class
+glue\BasicAuth.class
 locators\Home.class
-pages\Home.class
 core\Manager.class
 glue\Home.class
